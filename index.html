@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="./css/enviroment.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+  </head>
+
+  <body>
+    <div class="cursor cursor--small" id="cursor--small"></div>
+    <div class="cursor cursor--circle" id="cursor--circle"></div>
+
+    <img
+      src="./assets/logo/logo-sobre-negro.svg"
+      width="250px"
+      style="position: absolute; top: 30px; left: 30px"
+    />
+    <div class="hamburguer-menu" onclick="toggle(this)">
+      <span class="line first-line"></span>
+      <span class="line second-line"></span>
+    </div>
+    <div class="menu-expanded">
+      <ul>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">About Project</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="moonSubmenu">
+      <a class="bg_links social portfolio" id="pausarBoton">
+        <span class="icon"></span>
+      </a>
+      <a class="bg_links social dribbble" id="cambiar">
+        <span class="icon"></span>
+      </a>
+      <a class="bg_links social linkedin" id="fullscreenButton">
+        <span class="icon"></span>
+      </a>
+      <a class="bg_links logo"></a>
+    </div>
+
+    <div class="timelineContainer"></div>
+    <div class="triangle">
+      <div
+        class="triangle-up"
+        alt=""
+        width="98px"
+        height="98px"
+        srcset=""
+      ></div>
+      <div
+        class="triangle-two"
+        alt=""
+        width="100px"
+        height="100px"
+        srcset=""
+      ></div>
+    </div>
+    <audio id="miCancion" autoplay loop>
+      <source src="./assets/sound/background-loop-1.mp3" type="audio/mpeg" />
+    </audio>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js" /*,
+                "cannon-es": "./node_modules/cannon-es/dist/cannon-es.js",
+                "cannon-es-debugger": "./node_modules/cannon-es-debugger/dist/cannon-es-debugger.js",
+                "cannon-utils": "./node_modules/cannon-utils/dist/cannon-utils.js"*/
+        }
+      }
+    </script>
+
+    <script type="module" src="./main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/mouse.js"></script>
+    <script src="./js/fullscreen.js"></script>
+    <script src="./js/audio.js"></script>
+    <script type="module" src="./js/slider.js"></script>
+    <script>
+      function toggle(element) {
+        element.classList.toggle("change");
+      }
+    </script>
+  </body>
+</html>
